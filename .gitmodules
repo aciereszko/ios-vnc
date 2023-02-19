@@ -1,0 +1,3 @@
+[submodule "iOSVNCServer/vendor/jsmn"]
+	path = iOSVNCServer/vendor/jsmn
+	url = https://github.com/zserge/jsmn.git

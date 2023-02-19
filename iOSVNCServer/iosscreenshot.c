@@ -26,7 +26,10 @@ iosss_handle_t iosss_create(const char *UDID) {
         return NULL;
     }
 
-    if (screenshotr_client_start_service(handle_struct->device, &handle_struct->screenshotr, "iosscreenshot")
+    screenshotr_error_t error = screenshotr_client_start_service(handle_struct->device, &handle_struct->screenshotr, "iosscreenshot");
+        fprintf(stderr, "screenshotr_client_start_service: %d\n", (int)error);
+
+    if (error
         != SCREENSHOTR_E_SUCCESS) {
         idevice_free(handle_struct->device);
         fputs("ERROR: Could not start screenshotr service.\n", stderr);

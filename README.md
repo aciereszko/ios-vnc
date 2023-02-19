@@ -41,3 +41,6 @@ Point your favorite VNC client to `localhost:5901` and you will be able to take 
 
 ### Resources
 ##### [TestingBot](https://testingbot.com/)
+
+Run this to get session id!!
+curl -X POST $JSON_HEADER -d "{\"capabilities\":{\"bundleId\":\"com.apple.mobilesafari\"}}" 192.168.3.11:8100/session
